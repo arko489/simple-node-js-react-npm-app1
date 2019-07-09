@@ -5,6 +5,6 @@ stage('SCM Checkout')
    }
    stage('Compile-Package')
    {
-      sh'jenkins npm integration'
+      sh'npm install'
       }
       }
