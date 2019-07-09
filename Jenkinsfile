@@ -1,15 +1,10 @@
-pipeline {
-    agent {
-        docker {
-            image 'node:6-alpine' 
-            args '-p 3000:3000' 
-        }
-    }
-    stages {
-        stage('Build') { 
-            steps {
-                sh 'npm install' 
-            }
-        }
-    }
-}
+node{
+stage('SCM Checkout')
+{
+   git 'https://github.com/arko489/simple-node-js-react-npm-app.git'
+   }
+   Stage('Compile-Package')
+   {
+      sh'npm'
+      }
+      }
